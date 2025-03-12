@@ -62,7 +62,7 @@ export default function Header() {
             <ul className="navbar-nav m-auto mb-2 mb-lg-0 column-gap-5">
               {links.map((link) => {
                 return (
-                  <li key={link.name} className="nav-item m-auto">
+                  <li key={link.name} className="nav-item me-auto">
                     <Link
                       href={link.href}
                       className={`nav-link${
