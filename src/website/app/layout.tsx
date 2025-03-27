@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import '@/styles/global.scss';
+import '@/styles/global.css';
 import { ThemeProvider } from 'next-themes';
 import Header from '@/components/header';
 
@@ -28,16 +28,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ThemeProvider defaultTheme="dark" attribute="data-bs-theme">
+        <ThemeProvider
+          defaultTheme="dark"
+          attribute="class"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Header />
-          <div className="container-fluid mt-4">
-            <div className="row">
-              <div className="col-md-2 col-xs-hidden"></div>
-              <div className="col">{children}</div>
-              <div className="col-md-2 col-xs-hidden"></div>
-            </div>
-          </div>
+          <div className="m-12">{children}</div>
         </ThemeProvider>
       </body>
     </html>
