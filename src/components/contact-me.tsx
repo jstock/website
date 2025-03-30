@@ -53,6 +53,7 @@ export function ContactMe() {
     try {
       await SendEmail({ email: values.email, message: values.message });
       toast.success('Email sent.');
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast.error(`Error encountered sending email: ${error.message}.`);
     }
