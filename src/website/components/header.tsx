@@ -14,8 +14,7 @@ const socials = [
 ];
 
 const links = [
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'About', href: '/' },
   { name: 'Projects', href: '/projects' },
 ];
 
@@ -38,7 +37,7 @@ export default function Header() {
             })}
           </span>
         </div>
-        <div className="gap-16 hidden md:inline-flex">
+        <div className="gap-24 hidden md:inline-flex">
           {links.map((link) => {
             return (
               <div key={link.href}>

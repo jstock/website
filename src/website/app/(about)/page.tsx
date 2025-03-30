@@ -1,3 +1,4 @@
+import { ContactMe } from '@/components/contact-me';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -5,5 +6,9 @@ export const metadata: Metadata = {
 };
 
 export default function AboutMe() {
-  return <h1>About Me</h1>;
+  return (
+    <div>
+      <ContactMe />
+    </div>
+  );
 }
