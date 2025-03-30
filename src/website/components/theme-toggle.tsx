@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { useTheme } from 'next-themes';
-
 import { Button } from '@/components/ui/button';
 
 export function ThemeToggle() {
@@ -17,11 +16,11 @@ export function ThemeToggle() {
       variant="outline"
       size="icon"
       className="cursor-pointer"
-      title="Toggle Theme"
+      title="Toggle Dark Mode"
       onClick={() => toggleTheme()}
     >
       <i className="bi bi-lightbulb-fill"></i>
-      <span className="sr-only">Toggle theme</span>
+      <span className="sr-only">Toggle Dark Mode</span>
     </Button>
   );
 }
