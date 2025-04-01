@@ -6,6 +6,11 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
+# Install pnpm
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN npm i -g pnpm
+
 # Install dependencies
 COPY package.json pnpm-lock.yaml* ./
 RUN pnpm i --frozen-lockfile

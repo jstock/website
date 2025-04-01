@@ -38,11 +38,6 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@62f4f872db3836360b72999f4b87f1ff13310f3a
 
-      - name: install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
         env:
