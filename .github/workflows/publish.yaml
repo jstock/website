@@ -7,7 +7,7 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Deploy to Amazon ECS
+name: Publish to ECR
 
 on:
   release:
@@ -15,7 +15,7 @@ on:
 
 env:
   AWS_REGION: us-east-2 # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: jameystock.dev/containers # set this to your Amazon ECR repository name
+  ECR_REPOSITORY: jstock/website # set this to your Amazon ECR repository name
 
 jobs:
   deploy:
