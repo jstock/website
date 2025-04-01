@@ -38,6 +38,16 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@62f4f872db3836360b72999f4b87f1ff13310f3a
 
+      - name: use node 22.13.1
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.1'
+          cache: 'npm'
+          registry-url: https://registry.npmjs.org
+
+      - name: Update Corepack
+        run: npm i -g corepack@latest
+
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
         env:
