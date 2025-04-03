@@ -40,7 +40,7 @@ export default function Header() {
         <div className="gap-24 hidden md:inline-flex">
           {links.map((link) => {
             return (
-              <div key={link.href}>
+              <div key={link.href} title={link.name}>
                 <Link href={link.href}>{link.name}</Link>
               </div>
             );
@@ -53,7 +53,7 @@ export default function Header() {
       <div className="mx-4 md:hidden">
         {links.map((link) => {
           return (
-            <div key={link.href} className="py-4">
+            <div key={link.href} title={link.name} className="py-4">
               <Link href={link.href}>{link.name}</Link>
             </div>
           );
